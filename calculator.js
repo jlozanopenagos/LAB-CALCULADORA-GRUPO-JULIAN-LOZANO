@@ -24,26 +24,20 @@ const operator = args[2];
 // Variable para almacenar el resultado final
 let result;
 
-// Paso 2: Decidir qué operación realizar
-// Pistas:
-// - Usa sentencias if, else if y else para verificar el operador y realizar la operación correspondiente.
-// - Asegúrate de usar el operador de igualdad estricta (===) para comparar
-// tanto el valor como el tipo de la entrada.
-// Esto ayuda a evitar errores causados por la conversión automática de tipos de JavaScript.
+if(operator === "+"){
+    result = num1 + num2;
 
-
-
-// Escribe tu primera condición a continuación
-_________________________________________
-
-// Continúa con la siguiente condición
-_________________________________________
-
-// Agrega más condiciones
-_________________________________________
-
-// Bonus: Maneja el caso donde el segundo número es 0 durante la división
-// Si el operador no es válido, almacena "Operador inválido" en el resultado
-
-// Paso 3: Imprimir el resultado
+} else if (operator === "-"){
+    result = num1 - num2;
+} else if (operator === "*") {
+    result = num1 * num2;
+} else if (operator === "/"){
+    if (num2 === 0){
+        result = "No se puede dividir por cero";
+    } else{
+        result = num1 / num2;
+    }
+} else {
+    result = "Operador inválido"
+}
 console.log(result);
